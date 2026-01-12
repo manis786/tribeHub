@@ -1,0 +1,128 @@
+:root {
+    --brand-orange: #444341;
+    --dark-navy: #f1bd9a;
+    --text-white: #ffffff;
+    --text-muted: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+
+    background: linear-gradient(135deg, var(--brand-orange) 0%, var(--dark-navy) 70%);
+    background-attachment: fixed;
+    color: var(--text-white);
+    min-height: 100vh;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: rgba(226, 221, 143, 0.863);
+    backdrop-filter: blur(10px);
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.nav-logo span {
+    color: var(--brand-orange);
+}
+
+.small-logo {
+    height: 45px;
+}
+
+.nav-login-btn {
+    background: white;
+    color: var(--brand-orange);
+    border: none;
+    padding: 8px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 70px);
+    text-align: center;
+}
+
+.big-logo {
+    width: 200px;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+    margin-bottom: 20px;
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.main-title span {
+    color: var(--brand-orange);
+}
+
+.tagline {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.description {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 20px;
+    color: var(--text-muted);
+}
+
+
+.btn-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--brand-orange);
+    color: white;
+    border: 2px solid var(--brand-orange);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
