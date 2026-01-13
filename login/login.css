@@ -1,0 +1,125 @@
+:root {
+    --brand-orange: #444341;
+    --dark-navy: #f1bd9a;
+    --text-white: #ffffff;
+    --text-muted: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #444341 0%, #f1bd9a 70%);
+    background-attachment: fixed;
+    min-height: 80vh;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+
+}
+
+.hero {
+
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.big-logo {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.signupform {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 550px;
+    padding: 50px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.inputfeilds {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.inputfeilds input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+
+.btn-primary {
+    background: var(--brand-orange);
+    color: rgb(240, 232, 232);
+    border: 2px solid var(--brand-orange);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: rgb(78, 3, 3);
+    border: 2px solid white;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    margin-top: 40px;
+    gap: 10px;
+}
+
+.inputtitle {
+    color: rgb(167, 9, 9);
+    font-weight: 600;
+
+    font-size: 28px;
+}
+
+@media (max-width: 480px) {
+    .signupform {
+        padding: 20px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .inputtitle {
+        font-size: 1.2rem;
+    }
+}
+.inputsubtitle {
+    color: rgb(117, 12, 12);
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 16px;
+}

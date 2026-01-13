@@ -8,7 +8,7 @@ body {
 }
 
 .NavLogo img {
-    width: 250px;
+    width: 150px;
     margin: 10px 5px;
 }
 
@@ -31,10 +31,10 @@ body {
 .NavItems li {
 
     list-style-type: none;
-    font-size: 22pt;
+    font-size: 14pt;
     color: white;
 
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .NavItems {

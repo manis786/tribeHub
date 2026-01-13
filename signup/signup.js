@@ -69,6 +69,7 @@ async function submittForm() {
       showConfirmButton: false
     });
     resetForm();
+    window.location.href = "../login/login.html";
   } catch (error) {
     console.error("Error:", error.code, error.message);
     Swal.fire({
