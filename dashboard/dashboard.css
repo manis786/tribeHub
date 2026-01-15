@@ -1,71 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+:root {
+    --brand-orange: #444341; 
+    --peach-navy: #f1bd9a;  
+    --text-white: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.15);
+}
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: white;
-}
-
-.NavLogo img {
-    width: 150px;
-    margin: 10px 5px;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, var(--brand-orange) 0%, var(--peach-navy) 70%);
+    background-attachment: fixed;
+    color: var(--text-white);
+    min-height: 100vh;
 }
 
 .NavBar {
-    background-color: rgb(255, 166, 0);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background: rgba(226, 221, 143, 0.15); 
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
+.NavLogo {
+    flex-shrink: 0;
+}
 
-.NavItems ul {
-
-    display: flex;
-    gap: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    cursor: pointer;
-    margin-left: 200px;}
-
-.NavItems li {
-
-    list-style-type: none;
-    font-size: 14pt;
-    color: white;
-
-    margin-top: 20px;
+.NavLogo img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
 }
 
 .NavItems {
-    padding-left: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: 40px;
 }
 
-.PostArea {
-    margin-top: 20px;
-    margin-left: 35px;
+.nav-links, .user-actions {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+}
+
+.NavItems li {
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    color: var(--text-white);
+    white-space: nowrap;
+}
+
+.NavItems li:hover {
+    color: var(--brand-orange);
+}
+
+.wlcm {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+}
+
+.logoutbtn {
+    background: var(--text-white);
+    color: var(--brand-orange);
+    border: none;
+    padding: 8px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logoutbtn:hover {
+    background: var(--brand-orange);
+    color: white;
+}
+
+.HeroSection {
+    max-width: 600px;
+    margin: 30px auto;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
 }
 
 #postinp {
-    width: 400px;
-    height: 41px;
-    padding-left: 5px;
-    border: 1px solid rgb(255, 136, 0);
-    display: none;
-}
-#postNow{
-    display: none;
-}
-.logoutbtn{
-    margin-top: 20px;
-    margin-left: 20px;
-    padding: 5px ;
-    background-color: rgb(199, 209, 58);
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
- 
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px 0;
+    color: #333;
 }
-.wlcm{
-    color: rgb(9, 9, 110);
+
+#postsContainer {
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+}
+
+.post-card {
+    background: rgba(255, 255, 255, 0.98);
+    color: #333;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.profile-circle {
+    width: 40px;
+    height: 40px;
+    background: var(--brand-orange);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+@media (max-width: 992px) {
+    .nav-links { display: none; }
+    .NavItems { justify-content: flex-end; }
 }
