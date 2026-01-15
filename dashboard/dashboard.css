@@ -25,8 +25,7 @@ body {
     text-decoration: none;
     font-weight: 600;
     cursor: pointer;
-
-}
+    margin-left: 200px;}
 
 .NavItems li {
 
@@ -55,4 +54,18 @@ body {
 }
 #postNow{
     display: none;
+}
+.logoutbtn{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 5px ;
+    background-color: rgb(199, 209, 58);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+ 
+}
+.wlcm{
+    color: rgb(9, 9, 110);
 }

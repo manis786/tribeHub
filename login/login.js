@@ -1,8 +1,8 @@
 import { getAuth, signInWithEmailAndPassword, sendEmailVerification } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js";
+import { getDatabase, ref, set,get } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js";
 import { app } from "../config.js";
 const auth = getAuth(app);
-
+const database = getDatabase(app)
 const jumpin = document.getElementById("jumpin");
 
 const loginuser = async () => {
@@ -16,7 +16,20 @@ const loginuser = async () => {
             console.log("USer", user)
             if (user.emailVerified) {
                 localStorage.setItem("user_uid", user.uid);
-                window.location = "../../dashboard/dashboard.html"
+                const userRef = ref(database, 'users/' + user.uid);
+                get(userRef).then((data) => {
+                    if (data.exists()) {
+                        const userData = data.val();
+                        localStorage.setItem("userName", userData.fullname || "User");
+                    } else {
+                        localStorage.setItem("userName", "User");
+                    }
+
+                    window.location.href = "../../dashboard/dashboard.html";
+                }).catch((err) => {
+                    console.error("Database error:", err);
+                    window.location.href = "../../dashboard/dashboard.html";
+                });
             } else {
                 sendEmailVerification(auth.currentUser)
                     .then(() => {
