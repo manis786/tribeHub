@@ -146,3 +146,9 @@ document.querySelector(".logoutbtn").onclick = () => {
     localStorage.clear();
     window.location.href = "../../index.html";
 };
+
+const uploadImgBtn = document.getElementById('uploadimgbtn');
+const postImageInput = document.getElementById('postImage');
+uploadImgBtn.addEventListener("click", ()=>{
+    console.log ("Image upload feature coming soon!");
+})
